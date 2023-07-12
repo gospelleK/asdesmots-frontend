@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 import { AuthenticationGuard } from './shared/guard/auth/authentication.guard';
+import { ArcadeComponent } from './back-office/all-modules/arcade/arcade.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'welcome', pathMatch: 'full' },
   { path: 'auth', redirectTo: 'login', pathMatch: 'full'},
+  {path: 'aracde', component: ArcadeComponent},
   // { path: 'register', redirectTo: 'auth/register', pathMatch: 'full' },
   { path: 'reset', redirectTo: 'auth/rest-password', pathMatch: 'full' },
   { path: 'error404', redirectTo: 'front/error404', pathMatch: 'full' },

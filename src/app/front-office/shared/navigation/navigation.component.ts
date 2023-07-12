@@ -31,7 +31,7 @@ export class NavigationComponent implements OnInit {
   setFrLang() {
     this.translationService.setLanguage('fr');
   }
-  
+
   navigateToHome() {
     this.router.navigate(['/front']);
     // setTimeout(()=>{
@@ -60,6 +60,10 @@ export class NavigationComponent implements OnInit {
   }
 
   navigateToRegister() {
+    this.router.navigate(['/auth/register']);
+  }
+
+  navigateToArcade() {
     this.router.navigate(['/auth/register']);
   }
 }

@@ -14,6 +14,7 @@ import { HttpLoaderFactory } from 'src/app/app.module';
 import { ProgressIndeterminateModule } from 'src/app/shared/elements/progress-indeterminate/progress-indeterminate.module';
 import { FooterModule } from '../shared/footer/footer.module';
 import { ArcadeComponent } from './arcade/arcade.component';
+import { AddArcadeComponent } from './arcade/add-arcade/add-arcade.component';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { ArcadeComponent } from './arcade/arcade.component';
     AllModulesComponent,
     SidemenuComponent,
     ArcadeComponent,
+    AddArcadeComponent,
   ],
   imports: [
     CommonModule,
