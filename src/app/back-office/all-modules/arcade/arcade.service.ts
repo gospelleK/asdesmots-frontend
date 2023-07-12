@@ -1,26 +1,18 @@
-import { HttpClient } from '@angular/common/http';
+
+
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-
-const baseUrl = 'https://api-dev.asdesmots.om/game-arcarde';
-
-
 export class ArcadeService {
+  private apiUrl = 'https://api-dev.asdesmots.com/game-arcarde';
 
   constructor(private http: HttpClient) { }
 
-
- /*listing des arcades */
-  get(id) {
-    return this.http.get(`${baseUrl}/${id}`);
+  get(): Observable<any> {
+    return this.http.get(this.apiUrl);
   }
-  /*Creation d'une arcade */
-  create(data) {
-    return this.http.post(baseUrl, data);
-  }
-
-
 }
