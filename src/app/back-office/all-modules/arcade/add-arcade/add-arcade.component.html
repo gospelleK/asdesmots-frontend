@@ -1,1 +1,108 @@
-<p>add-arcade works!</p>
+<div class="page-wrapper">
+  <div class="content container-fluid">
+
+    <!-- Page Header -->
+    <div class="page-header">
+      <div class="row">
+        <div class="col-sm-12">
+          <h3 class="page-title">Customers</h3>
+          <ul class="breadcrumb">
+            <li class="breadcrumb-item"><a [routerLink]="'/index'">Dashboard</a></li>
+            <li class="breadcrumb-item"><a [routerLink]="'/Arcade/add-aracde'">Arcade</a></li>
+            <li class="breadcrumb-item active">Add Arcade</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- /Page Header -->
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Basic Info</h4>
+            <form (ngSubmit)="addArcade()" [formGroup]="addArcadeForm">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label>Name<span class="mandatory">*</span></label>
+                    <input type="text" class="form-control" formControlName="ArcadeName">
+                    <div *ngIf="addArcadeForm.get('ArcadeName')?.invalid && addArcadeForm.get('ArcadeName')?.touched">
+                                    <small class="text-danger">*Name required</small>
+                    </div>
+                  </div>
+
+
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label>Description <span class="mandatory">*</span></label>
+                   <textarea name="description" id="" cols="30" rows="10" formControlName="ArcadeDescription"></textarea>
+                    <div *ngIf="addDescriptionForm.get('ArcadeDescription')?.invalid && addDescriptionForm.get('ArcadeDescription')?.touched">
+                                    <small class="text-danger">*description required</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label>max Players Number<span class="mandatory">*</span></label>
+                    <input type="number" class="form-control" formControlName="ArcadeNumber">
+                    <div *ngIf="addArcadeForm.get('ArcadeNumber')?.invalid && addArcadeForm.get('ArcadeNumber')?.touched">
+                                    <small class="text-danger">*Name required</small>
+                    </div>
+                  </div>
+
+
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label>start Date <span class="mandatory">*</span></label>
+                    <input type="date" class="form-control" formControlName="ArcadedateStart">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label>start Date <span class="mandatory">*</span></label>
+                    <input type="date" class="form-control" formControlName="ArcadedateStart">
+                  </div>
+                </div>
+
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>End Date <span class="mandatory">*</span></label>
+                  <input type="date" class="form-control" formControlName="ArcadedateEnd">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>start Registration Date<span class="mandatory">*</span></label>
+                  <input type="date" class="form-control" formControlName="ArcadedateRegistrationStart">
+                </div>
+              </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>End Registration Date <span class="mandatory">*</span></label>
+                <input type="date" class="form-control" formControlName="ArcadedateRegistrationEnd">
+              </div>
+            </div>
+          </div>
+
+
+              <div class="text-end mt-4">
+                <button type="submit" class="btn btn-primary">Add Arcade </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /Page Wrapper -->
