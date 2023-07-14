@@ -82,23 +82,26 @@
               <div class="col-md-6">
                 <div class="form-group">
                   <label>start Registration Date<span class="mandatory">*</span></label>
-                  <input type="date" class="form-control" formControlName="ArcadedateRegistrationStart">
+                  <input type="date" class="form-control" formControlName="ArcadedateRegistrationStart" [(ngModel)]="Arcade.startRegistrationDate">
                 </div>
               </div>
 
             <div class="col-md-6">
               <div class="form-group">
                 <label>End Registration Date <span class="mandatory">*</span></label>
-                <input type="date" class="form-control" formControlName="ArcadedateRegistrationEnd">
+                <input type="date" class="form-control" formControlName="ArcadedateRegistrationEnd" [(ngModel)]="Arcade.endRegistrationDate">
               </div>
             </div>
           </div>
 
 
               <div class="text-end mt-4">
-                <button type="submit" class="btn btn-primary">Add Arcade </button>
+                <button type="submit" class="btn btn-primary " (click)="addArcade(Arcade)">Add Arcade </button>
               </div>
             </form>
+
+
+
           </div>
         </div>
       </div>

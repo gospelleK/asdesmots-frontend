@@ -15,4 +15,8 @@ export class ArcadeService {
   get(): Observable<any> {
     return this.http.get(this.apiUrl);
   }
+
+  add(aracde : any) {
+    return this.http.post(`${this.apiUrl}`, aracde)
+  }
 }

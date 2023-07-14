@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ArcadeService } from '../arcade.service';
+
 
 @Component({
   selector: 'app-add-arcade',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddArcadeComponent implements OnInit {
 
-  constructor() { }
+
+  constructor(private arcadeService: ArcadeService) { }
 
   ngOnInit(): void {
   }
 
+
+  addArcade(Arcade: any){
+    this.arcadeService.add(Arcade).subscribe(() => {
+
+    });
+  }
+
 }
+
